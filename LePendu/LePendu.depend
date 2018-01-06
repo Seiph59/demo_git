@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1515021838 source:c:\users\seiph\documents\codeblocks_projets\lependu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1514385294 
+
+1515024398 source:c:\users\seiph\documents\codeblocks_projets\lependu\jeu.c
+	"Jeu.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1515024358 c:\users\seiph\documents\codeblocks_projets\lependu\jeu.h
+
+1514470952 source:/media/seiph/EX_dam/LePendu/Jeu.c
+	"Jeu.h"
+
+1514470413 /media/seiph/EX_dam/LePendu/Jeu.h
+
+1514477020 source:/media/seiph/EX_dam/LePendu/main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1515023622 source:c:\users\seiph\documents\codeblocks_projets\lependu\dico.c
+	"Dico.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1515022326 c:\users\seiph\documents\codeblocks_projets\lependu\dico.h
+

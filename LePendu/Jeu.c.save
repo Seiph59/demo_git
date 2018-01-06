@@ -1,0 +1,97 @@
+#include "Jeu.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+char lireCaractere()
+{
+    char caractere =0;
+
+    caractere = getchar();
+    caractere = toupper(caractere);
+
+    while (getchar() != '\n');
+
+    return caractere;
+}
+
+void menu(char *pointeurMotSecret)
+{
+    int choixMenu;
+    choixMenu = 0;
+
+    while(choixMenu ==0 || choixMenu >2)
+    {
+
+        printf("Bienvenue sur le jeu du Pendu\n");
+        printf("Menu Principal\n");
+        printf("---------------------\n");
+        printf("1. Lancer le jeu\n");
+        printf("2. Quitter\n");
+        printf("Quel est votre choix ? \n");
+
+        scanf("%d" , &choixMenu);
+        while(getchar() != '\n');
+
+        switch(choixMenu)
+        {
+            case 1:
+                lancerJeu();
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+void lancerJeu()
+{
+    int i, j;
+    int decompteTour =10;
+    int longueurChaine =0;
+    char motSecret [] = "TEST"
+    char increment [] = "*";
+    char motCache[100] = "";
+    char lettreEntree = "";
+
+    longueurChaine = strlen(motSecret);
+
+    for (i=0; i < longueurChaine;i++)
+    {
+        strcat(motCache, increment);
+    }
+
+    while(strcmp(motCache, motSecret) != 0 && decompteTour > 0)
+    {
+        printf("il vous reste %d coup(s) a jouer\n", decompteTour);
+        printf("Voici le mot que vous devez trouver : %s\n", motCache);
+        printf("Veuillez inserer la lettre a laquelle vous pensez : " );
+        lettreEntree = lireCaractere();
+        for (j= 0; j < longueurChaine; j++)
+        {
+            if(lettreEntree == motSecret[j])
+            {
+                motCache[j] = lettreEntree;
+            }
+
+        }
+        decompteTour--;
+
+    }
+    if (strcmp(motCache, motSecret) == 0)
+    {
+    printf("Bravo !!!!! , Vous avez trouve le mot mystere => %s", motSecret);
+    }
+
+    else
+    {
+    printf("Dommage! , vous avez perdu, le mot etait : %s ", motSecret);
+    }
+
+}
+
+
+
